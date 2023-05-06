@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Text, StyleSheet, View, FlatList, Image } from "react-native";
+import { Text, StyleSheet, View, FlatList, Image, Pressable } from "react-native";
 
 const ProductListingScreen = params => {
   const [products, setProducts] = useState([]);
@@ -47,7 +47,7 @@ const ProductListingScreen = params => {
       <View style={styles.productsContainer}>
         <FlatList data={products} numColumns={2} keyExtractor={item => item.id.toString()} renderItem={({
         item
-      }) => <Product product={item} />} columnWrapperStyle={{
+      }) => <Pressable><Product product={item} /></Pressable>} columnWrapperStyle={{
         justifyContent: "space-around"
       }} showsVerticalScrollIndicator={false} />
       </View>
