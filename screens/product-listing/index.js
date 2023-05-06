@@ -6,40 +6,40 @@ const ProductListingScreen = params => {
   useEffect(() => {
     setProducts([{
       id: 1,
-      name: "Product name",
+      name: "Pepsi 24 pack (12 0z)",
       status: true,
       isFavorite: false,
-      image: require("./assets/productImage.png")
+      image: require("./assets/24-pack.jpeg")
     }, {
       id: 2,
-      name: "Product name",
+      name: "Pepsi 15 pack (12 oz)",
       status: false,
       isFavorite: true,
-      image: require("./assets/productImage2.png")
+      image: require("./assets/15-pack.jpeg")
     }, {
       id: 3,
-      name: "Product name",
+      name: "Pepsi 20 oz",
       status: true,
       isFavorite: false,
-      image: require("./assets/productImage.png")
+      image: require("./assets/20-oz.jpeg")
     }, {
       id: 4,
-      name: "Product name",
+      name: "Pepsi Wild Cherry",
       status: false,
       isFavorite: true,
-      image: require("./assets/productImage2.png")
+      image: require("./assets/20-oz-wild-cherry.jpeg")
     }, {
       id: 5,
-      name: "Product name",
+      name: "Mountain Dew 2 Liter",
       status: true,
       isFavorite: false,
-      image: require("./assets/productImage.png")
+      image: require("./assets/mountain-dew-2-liter.jpeg")
     }, {
       id: 6,
-      name: "Product name",
+      name: "Mountain Dew 12 pack (12 oz)",
       status: false,
       isFavorite: true,
-      image: require("./assets/productImage2.png")
+      image: require("./assets/mountain-dew-12-pack.jpeg")
     }]);
   }, []);
   return <View style={styles.container}>
