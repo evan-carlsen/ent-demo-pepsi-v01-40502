@@ -49,7 +49,7 @@ const ProductListingScreen = params => {
         item
       }) => <Pressable><Product product={item} /></Pressable>} columnWrapperStyle={{
         justifyContent: "space-around"
-      }} showsVerticalScrollIndicator={false} />
+      }} showsVerticalScrollIndicator={false} style={styles.ByotPWXt} />
       </View>
     </View>;
 };
@@ -61,6 +61,10 @@ const styles = StyleSheet.create({
   },
   productsContainer: {
     paddingHorizontal: 20
+  },
+  ByotPWXt: {
+    width: 325,
+    height: 781
   }
 });
 export default ProductListingScreen;
