@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { ImageBackground } from "react-native";
+import { useState, useEffect } from "react";
 import { Text, View, StyleSheet, Image, Pressable } from "react-native";
-import { Slider } from "react-native-elements";
 
 const ProductDetails = () => {
   const [product, setProduct] = useState({});
@@ -34,17 +34,17 @@ const ProductDetails = () => {
 
   return <View style={styles.container}>
       <View style={styles.imageContainer}>
-        <Image source={require("./assets/crowdboticsLogo.png")} style={styles.logo} />
+        <Image source={product.image} style={styles.logo} />
+
+        <ImageBackground style={styles.HNTMQVum} source={require("./24-pack.jpeg")} resizeMode="cover"></ImageBackground>
       </View>
       <View style={styles.cardContainer}>
         <View style={styles.bar} />
         <Text style={styles.title}>{product.name}</Text>
         <Text style={styles.description}>{product.description}</Text>
-        <Slider minimumValue={1} maximumValue={3} step={1} value={size} onValueChange={setSize} minimumTrackTintColor="#ECECEC" maximumTrackTintColor="#ECECEC" thumbTintColor="#EA4335" thumbStyle={styles.thumb} trackStyle={styles.track} />
+
         <View style={styles.flexRow}>
-          {["Small", "Medium", "Large"].map((item, index) => <Text key={index} style={[styles.sizeText, index === size - 1 ? styles.boldSizeText : null]}>
-              {item}
-            </Text>)}
+          {["Small", "Medium", "Large"].map(() => {})}
         </View>
         <View style={styles.counterContainer}>
           <View style={styles.priceContainer}>
@@ -79,7 +79,8 @@ const styles = StyleSheet.create({
   imageContainer: {
     alignItems: "center",
     justifyContent: "center",
-    height: 200
+    height: 200,
+    backgroundColor: "#FFFFFF"
   },
   logo: {
     width: 30,
@@ -110,28 +111,10 @@ const styles = StyleSheet.create({
     color: "#4E4E4E",
     textAlign: "justify"
   },
-  thumb: {
-    width: 30,
-    height: 30,
-    borderWidth: 7,
-    borderColor: "rgba(249,216,217,0.6)"
-  },
-  track: {
-    height: 8,
-    borderRadius: 5
-  },
   flexRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center"
-  },
-  sizeText: {
-    fontSize: 16,
-    color: "#9A9A9A"
-  },
-  boldSizeText: {
-    color: "#000",
-    fontWeight: "bold"
   },
   priceText: {
     color: "#121212",
@@ -186,6 +169,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-end",
     marginBottom: 20
+  },
+  HNTMQVum: {
+    width: 200,
+    height: 185
   }
 });
 export default ProductDetails;
@@ -236,9 +223,5 @@ const buttonStyles = StyleSheet.create({
     color: "#fff",
     fontSize: 16,
     fontWeight: "bold"
-  },
-  childrenContainer: {
-    justifyContent: "center",
-    alignItems: "center"
   }
 });
