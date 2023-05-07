@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
+import { useState, useEffect } from "react";
 import { Text, StyleSheet, View, FlatList, Image } from "react-native";
 
-const ProductListingScreen = params => {
+const ProductListingScreen = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     setProducts([{
@@ -115,6 +117,7 @@ const tabViewStyles = StyleSheet.create({
 const Product = ({
   product
 }) => {
+  const navigation = useNavigation();
   const availability = {
     color: product.status ? "#12D790" : "#EA4335",
     fontSize: 12,
@@ -126,7 +129,9 @@ const Product = ({
 
         <Image source={product.isFavorite ? require("./assets/isFavouriteIcon.png") : require("./assets/favIcon.png")} style={productStyles.favIcon} />
       </View>
-      <View style={productStyles.descriptionContainer}>
+      <Pressable onPress={() => {
+      navigation.navigate("productDetails");
+    }}><View style={productStyles.descriptionContainer}>
         <Text style={productStyles.bold}>{product.name}</Text>
         <View style={productStyles.availabilityTextContainer}>
           <Text style={productStyles.availabilityText}>Purchase: </Text>
@@ -134,7 +139,7 @@ const Product = ({
             {product.status ? "Available" : "Not available"}
           </Text>
         </View>
-      </View>
+      </View></Pressable>
     </View>;
 };
 
