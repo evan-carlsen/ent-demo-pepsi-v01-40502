@@ -8,8 +8,12 @@ const ProductDetails = () => {
   const [size, setSize] = useState(3);
   useEffect(() => {
     setProduct({
-      name: "Product name",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porta sit bibendum nec tempor consequat consequat pretium. Mollis.",
+      id: 1,
+      name: "Pepsi 24 pack (12 0z)",
+      status: true,
+      isFavorite: false,
+      image: require("./assets/24-pack.jpeg"),
+      description: "Enjoy an ice cold Pepsi, the bold, refreshing cola. Pepsi is the official soft drink of the National Football League, Major League Baseball, and cola lovers everywhere.",
       price: 12.5,
       discountedPrice: 10,
       caption: "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
