@@ -5,7 +5,6 @@ import { Text, View, StyleSheet, Image, Pressable } from "react-native";
 const ProductDetails = () => {
   const [product, setProduct] = useState({});
   const [quantity, setQuantity] = useState(1);
-  const [size, setSize] = useState(3);
   useEffect(() => {
     setProduct({
       id: 1,
