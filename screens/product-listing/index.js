@@ -78,8 +78,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20
   },
   ByotPWXt: {
-    width: 325,
-    height: 781
+    width: 325
   }
 });
 export default ProductListingScreen;
