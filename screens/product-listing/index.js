@@ -1,6 +1,7 @@
+import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { Pressable } from "react-native";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Text, StyleSheet, View, FlatList, Image } from "react-native";
 
 const ProductListingScreen = () => {
