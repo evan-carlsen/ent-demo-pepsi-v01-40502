@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Text, View, StyleSheet, Image, Pressable } from "react-native";
 
 const ProductDetails = () => {
@@ -35,8 +35,7 @@ const ProductDetails = () => {
         <View style={styles.bar} />
         <Text style={styles.title}>{product.name}</Text>
         <Text style={styles.description}>{product.description}</Text>
-        
-        
+
         <View style={styles.counterContainer}>
           <View style={styles.priceContainer}>
             <Text style={styles.priceText}>
