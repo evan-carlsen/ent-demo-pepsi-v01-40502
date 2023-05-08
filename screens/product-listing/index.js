@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import { Pressable } from "react-native";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Text, StyleSheet, View, FlatList, Image } from "react-native";
 
 const ProductListingScreen = () => {
@@ -131,15 +131,17 @@ const Product = ({
       </View>
       <Pressable onPress={() => {
       navigation.navigate("productDetails");
-    }}><View style={productStyles.descriptionContainer}>
-        <Text style={productStyles.bold}>{product.name}</Text>
-        <View style={productStyles.availabilityTextContainer}>
-          <Text style={productStyles.availabilityText}>Purchase: </Text>
-          <Text style={availability}>
-            {product.status ? "Available" : "Not available"}
-          </Text>
+    }}>
+        <View style={productStyles.descriptionContainer}>
+          <Text style={productStyles.bold}>{product.name}</Text>
+          <View style={productStyles.availabilityTextContainer}>
+            <Text style={productStyles.availabilityText}>Purchase: </Text>
+            <Text style={availability}>
+              {product.status ? "Available" : "Not available"}
+            </Text>
+          </View>
         </View>
-      </View></Pressable>
+      </Pressable>
     </View>;
 };
 
