@@ -191,9 +191,7 @@ const Button = params => {
   return <View style={[buttonStyles.btnContainer, params.style]}>
       <View style={!params.hideShadow ? buttonStyles.shadowContainer : null}>
         <Pressable style={[buttonStyles.btn, btnStyle]} onPress={params.onPress}>
-          <Text style={[buttonStyles.btnText, btnText]}>
-            {params.buttonText}
-          </Text>
+          <Text style={[buttonStyles.btnText, btnText]}>{"Add to Cart"}</Text>
           <View style={styles.childrenContainer}>{params.children}</View>
         </Pressable>
       </View>
