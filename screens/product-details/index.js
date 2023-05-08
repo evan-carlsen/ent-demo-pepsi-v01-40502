@@ -7,18 +7,17 @@ const ProductDetails = ({
 }) => {
   const {
     product
-  } = route.params || {};
-  const [productDetails, setProductDetails] = useState({});
+  } = route.params || {}; // const [productDetailss, setProductDetailss] = useState({});
+
   const [quantity, setQuantity] = useState(1);
   const [size, setSize] = useState(3);
-  useEffect(() => {
-    setProductDetails({
-      name: "Product name",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porta sit bibendum nec tempor consequat consequat pretium. Mollis.",
-      price: 12.5,
-      discountedPrice: 10,
-      caption: "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-    });
+  useEffect(() => {// setProductDetailss({
+    //   name: "Product name",
+    //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porta sit bibendum nec tempor consequat consequat pretium. Mollis.",
+    //   price: 12.5,
+    //   discountedPrice: 10,
+    //   caption: "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+    // });
   }, []);
 
   const increment = () => {
@@ -35,7 +34,7 @@ const ProductDetails = ({
 
   return <View style={styles.container}>
       <View style={styles.imageContainer}>
-        <Image source={require("./assets/crowdboticsLogo.png")} style={styles.logo} />
+        <Image source={product?.image} style={styles.logo} />
       </View>
       <View style={styles.cardContainer}>
         <View style={styles.bar} />
@@ -78,8 +77,8 @@ const styles = StyleSheet.create({
     height: 200
   },
   logo: {
-    width: 30,
-    height: 30
+    width: '100%',
+    height: 300
   },
   cardContainer: {
     flex: 1,

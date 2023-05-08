@@ -1,3 +1,4 @@
+import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { Pressable } from "react-native";
 import { useState, useEffect } from "react";
@@ -11,36 +12,48 @@ const ProductListingScreen = () => {
       name: "Pepsi 24 pack (12 0z)",
       status: true,
       isFavorite: false,
+      price: 12.5,
+      discountedPrice: 10,
       image: require("./assets/24-pack.jpeg")
     }, {
       id: 2,
       name: "Pepsi 15 pack (12 oz)",
       status: false,
       isFavorite: true,
+      price: 10,
+      discountedPrice: 8,
       image: require("./assets/15-pack.jpeg")
     }, {
       id: 3,
       name: "Pepsi 20 oz",
       status: true,
       isFavorite: false,
+      price: 2.5,
+      discountedPrice: 2,
       image: require("./assets/20-oz.jpeg")
     }, {
       id: 4,
       name: "Pepsi Wild Cherry",
       status: false,
       isFavorite: true,
+      price: 2.5,
+      discountedPrice: 2,
       image: require("./assets/20-oz-wild-cherry.jpeg")
     }, {
       id: 5,
       name: "Mountain Dew 2 Liter",
       status: true,
       isFavorite: false,
+      price: 2.5,
+      discountedPrice: 2,
       image: require("./assets/mountain-dew-2-liter.jpeg")
     }, {
       id: 6,
       name: "Mountain Dew 12 pack (12 oz)",
       status: false,
       isFavorite: true,
+      price: 12.5,
+      discountedPrice: 10,
       image: require("./assets/mountain-dew-12-pack.jpeg")
     }]);
   }, []);
