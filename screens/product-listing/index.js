@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { Pressable } from "react-native";
 import { useState, useEffect } from "react";
@@ -131,7 +130,9 @@ const Product = ({
         <Image source={product.isFavorite ? require("./assets/isFavouriteIcon.png") : require("./assets/favIcon.png")} style={productStyles.favIcon} />
       </View>
       <Pressable onPress={() => {
-      navigation.navigate("productDetails");
+      navigation.navigate("productDetails", {
+        product: product
+      });
     }}>
         <View style={productStyles.descriptionContainer}>
           <Text style={productStyles.bold}>{product.name}</Text>
