@@ -1,10 +1,13 @@
+import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { ImageBackground } from "react-native";
 import { Text, View, StyleSheet, ScrollView, Pressable } from "react-native";
 
 const Onboarding2 = () => {
   return <ScrollView style={styles.container}>
-      <View style={styles.imgContainer}><ImageBackground style={styles.FcECZKji} source={require("./Pepsi_logo_2014.svg.png")} resizeMode="cover"></ImageBackground></View>
+      <View style={styles.imgContainer}>
+        <ImageBackground style={styles.FcECZKji} source={require("./Pepsi_logo_2014.svg.png")} resizeMode="cover"></ImageBackground>
+      </View>
       <Text style={styles.title}>Onboarding</Text>
       <View style={styles.descContainer}>
         <Text style={styles.desc}>
