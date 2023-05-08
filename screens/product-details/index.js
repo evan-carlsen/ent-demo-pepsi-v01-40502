@@ -2,12 +2,17 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Text, View, StyleSheet, Image, Pressable } from "react-native";
 
-const ProductDetails = () => {
-  const [product, setProduct] = useState({});
+const ProductDetails = ({
+  route
+}) => {
+  const {
+    product
+  } = route.params || {};
+  const [productDetails, setProductDetails] = useState({});
   const [quantity, setQuantity] = useState(1);
   const [size, setSize] = useState(3);
   useEffect(() => {
-    setProduct({
+    setProductDetails({
       name: "Product name",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porta sit bibendum nec tempor consequat consequat pretium. Mollis.",
       price: 12.5,
@@ -34,16 +39,16 @@ const ProductDetails = () => {
       </View>
       <View style={styles.cardContainer}>
         <View style={styles.bar} />
-        <Text style={styles.title}>{product.name}</Text>
-        <Text style={styles.description}>{product.description}</Text>
+        <Text style={styles.title}>{product?.name}</Text>
+        <Text style={styles.description}>{product?.description}</Text>
 
         <View style={styles.counterContainer}>
           <View style={styles.priceContainer}>
             <Text style={styles.priceText}>
-              ${product.discountedPrice && product.discountedPrice.toFixed(2)}
+              ${product?.discountedPrice && product?.discountedPrice?.toFixed(2)}
             </Text>
             <Text style={styles.actualPrice}>
-              ${product.price && product.price.toFixed(2)}
+              ${product?.price && product?.price?.toFixed(2)}
             </Text>
           </View>
           <View style={styles.counter}>
@@ -56,7 +61,7 @@ const ProductDetails = () => {
             </Pressable>
           </View>
         </View>
-        <Text style={styles.description}>{product.caption}</Text>
+        <Text style={styles.description}>{product?.caption}</Text>
         <Button buttonText="Confirm" style={styles.button} />
       </View>
     </View>;

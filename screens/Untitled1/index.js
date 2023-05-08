@@ -3,7 +3,12 @@ import { useNavigation } from "@react-navigation/native";
 import { ImageBackground } from "react-native";
 import { Text, View, StyleSheet, ScrollView, Pressable } from "react-native";
 
-const Onboarding2 = () => {
+const Onboarding2 = ({
+  route
+}) => {
+  const {
+    product
+  } = route.params || {};
   return <ScrollView style={styles.container}>
       <View style={styles.imgContainer}>
         <ImageBackground style={styles.FcECZKji} source={require("./Pepsi_logo_2014.svg.png")} resizeMode="cover"></ImageBackground>
