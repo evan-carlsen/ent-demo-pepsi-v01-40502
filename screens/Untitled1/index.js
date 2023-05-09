@@ -1,24 +1,15 @@
-import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { ImageBackground } from "react-native";
 import { Text, View, StyleSheet, ScrollView, Pressable } from "react-native";
 
-const Onboarding2 = ({
-  route
-}) => {
-  const {
-    product
-  } = route.params || {};
+const Onboarding2 = ({}) => {
   return <ScrollView style={styles.container}>
       <View style={styles.imgContainer}>
         <ImageBackground style={styles.FcECZKji} source={require("./Pepsi_logo_2014.svg.png")} resizeMode="cover"></ImageBackground>
       </View>
-      <Text style={styles.title}>Onboarding</Text>
+      
       <View style={styles.descContainer}>
-        <Text style={styles.desc}>
-          There is no better advertisement campaign that’s is low and also
-          successful at the same time. Great business ideas.
-        </Text>
+        
       </View>
       <Button buttonText={"Get started"} />
     </ScrollView>;
@@ -29,18 +20,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#ffffff"
   },
-  title: {
-    fontSize: 30,
-    marginHorizontal: 25,
-    marginTop: 10,
-    marginBottom: 10
-  },
   descContainer: {
     paddingHorizontal: 25
-  },
-  desc: {
-    color: "#757575",
-    marginBottom: 5
   },
   imgContainer: {
     height: 258,
