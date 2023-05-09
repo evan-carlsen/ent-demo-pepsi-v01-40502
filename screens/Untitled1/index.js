@@ -7,10 +7,8 @@ const Onboarding2 = ({}) => {
       <View style={styles.imgContainer}>
         <ImageBackground style={styles.FcECZKji} source={require("./Pepsi_logo_2014.svg.png")} resizeMode="cover"></ImageBackground>
       </View>
-      
-      <View style={styles.descContainer}>
-        
-      </View>
+
+      <View style={styles.descContainer}></View>
       <Button buttonText={"Get started"} />
     </ScrollView>;
 };
@@ -34,7 +32,8 @@ const styles = StyleSheet.create({
     width: 169,
     height: 236,
     position: "absolute",
-    left: 87
+    left: 87,
+    top: 60
   }
 });
 
@@ -60,11 +59,15 @@ const Button = params => {
 
 const buttonStyles = StyleSheet.create({
   btnContainer: {
+    position: 'absolute',
+    bottom: '0',
     paddingHorizontal: 40,
     justifyContent: "center",
     marginBottom: 20,
     marginTop: 40,
-    backgroundColor: "#ffffff"
+    backgroundColor: "#ffffff",
+    left: 66,
+    top: 192
   },
   btn: {
     backgroundColor: "#12D790",
