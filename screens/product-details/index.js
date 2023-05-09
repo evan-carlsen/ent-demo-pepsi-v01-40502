@@ -44,7 +44,8 @@ const ProductDetails = ({
         <View style={styles.counterContainer}>
           <View style={styles.priceContainer}>
             <Text style={styles.priceText}>
-              ${product?.discountedPrice && product?.discountedPrice?.toFixed(2)}
+              $
+              {product?.discountedPrice && product?.discountedPrice?.toFixed(2)}
             </Text>
             <Text style={styles.actualPrice}>
               ${product?.price && product?.price?.toFixed(2)}
@@ -74,10 +75,10 @@ const styles = StyleSheet.create({
   imageContainer: {
     alignItems: "center",
     justifyContent: "center",
-    height: 200
+    height: 300
   },
   logo: {
-    width: '100%',
+    width: "100%",
     height: 300
   },
   cardContainer: {
